@@ -4,10 +4,13 @@ var path = require('path');
 var concat = require('gulp-concat');
 var minify = require('gulp-minify-css');
 var through = require('through2');
+var browserify = require('gulp-browserify');
+var uglify = require('gulp-uglify');
+// var pump = require('pump');
 
 var src = {
-    less: './src/**/*.less',
-    svg: './src/**/*.svg'
+    less: './src/icons/**/*.less',
+    svg: './src/icons/**/*.svg'
 };
 
 gulp.task('less', function() {
@@ -43,8 +46,29 @@ gulp.task('svg', function() {
         .pipe(gulp.dest('./dist/images'));
 });
 
-gulp.task('watch', function() {
-    gulp.watch(src.less, ['less']);
+gulp.task('scripts', function() {
+    return gulp.src('./src/scripts/icon-search.js')
+        .pipe(browserify({
+            insertGlobals: true,
+            debug: false
+        }))
+        .pipe(concat('file-icon.js'))
+        .pipe(gulp.dest('./dist/js'));
 });
 
-gulp.task('default', ['svg', 'less', 'less-minify', 'watch']);
+gulp.task('scripts-uglify', function(cb) {
+    return gulp.src('./src/scripts/icon-search.js')
+        .pipe(browserify({
+            insertGlobals: true,
+            debug: false
+        }))
+        .pipe(concat('file-icon.min.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('./dist/js'));
+});
+
+gulp.task('watch', function() {
+    gulp.watch(src.less, ['less', 'scripts']);
+});
+
+gulp.task('default', ['svg', 'less', 'less-minify', 'scripts', 'scripts-uglify']);

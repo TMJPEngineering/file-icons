@@ -4,8 +4,8 @@
   background-size: 100%, 100%;
 }
 
-.pdf-file {
-  background-image: url('../images/pdf.svg');
+.excel-file {
+  background-image: url('../images/excel.svg');
   background-repeat: no-repeat;
   background-size: 100%, 100%;
 }
@@ -16,14 +16,14 @@
   background-size: 100%, 100%;
 }
 
-.excel-file {
-  background-image: url('../images/excel.svg');
+.text-file {
+  background-image: url('../images/text.svg');
   background-repeat: no-repeat;
   background-size: 100%, 100%;
 }
 
-.word-file {
-  background-image: url('../images/word.svg');
+.pdf-file {
+  background-image: url('../images/pdf.svg');
   background-repeat: no-repeat;
   background-size: 100%, 100%;
 }
