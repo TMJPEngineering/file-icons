@@ -1,0 +1,41 @@
+.default-file {
+  background-image: url('../images/default.svg');
+  background-repeat: no-repeat;
+  background-size: 100%, 100%;
+}
+
+.pdf-file {
+  background-image: url('../images/pdf.svg');
+  background-repeat: no-repeat;
+  background-size: 100%, 100%;
+}
+
+.ppt-file {
+  background-image: url('../images/ppt.svg');
+  background-repeat: no-repeat;
+  background-size: 100%, 100%;
+}
+
+.excel-file {
+  background-image: url('../images/excel.svg');
+  background-repeat: no-repeat;
+  background-size: 100%, 100%;
+}
+
+.word-file {
+  background-image: url('../images/word.svg');
+  background-repeat: no-repeat;
+  background-size: 100%, 100%;
+}
+
+.word-file {
+  background-image: url('../images/word.svg');
+  background-repeat: no-repeat;
+  background-size: 100%, 100%;
+}
+
+.zip-file {
+  background-image: url('../images/zip.svg');
+  background-repeat: no-repeat;
+  background-size: 100%, 100%;
+}

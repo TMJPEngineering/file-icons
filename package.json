@@ -1,0 +1,30 @@
+{
+  "name": "file-icons",
+  "version": "1.0.0",
+  "description": "TMJP Engineers default file icons",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TMJPEngineering/file-icons.git"
+  },
+  "keywords": [
+    "file-icons",
+    "file",
+    "icons"
+  ],
+  "author": "TMJP Engineers <dev.tmjp@gmail.com> (https://www.npmjs.com/~tmjp-engineering)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TMJPEngineering/file-icons/issues"
+  },
+  "homepage": "https://github.com/TMJPEngineering/file-icons#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-less": "^3.3.2",
+    "gulp-minify-css": "^1.2.4"
+  }
+}
