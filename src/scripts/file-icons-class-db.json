@@ -30,6 +30,7 @@
   "//": "Zip Files",
   "application/gzip": "zip-file",
   "application/zip": "zip-file",
+  "application/x-zip-compressed": "zip-file",
   "application/x-rar-compressed": "zip-file",
   "//": "All images doesn't have icons since it can be displayed as icon",
   "image/jpeg": false,

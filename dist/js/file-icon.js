@@ -1406,7 +1406,7 @@ process.chdir = function (dir) {
 
 var iconClass = require('./file-icons-class-db.json');
 
-File.prototype.class = function() {
+File.prototype.iconClass = function() {
     var type = this.type;
     // get the file class
     var fileClass = iconClass[type];
@@ -1417,7 +1417,7 @@ File.prototype.class = function() {
     return fileClass;
 }
 
-}).call(this,require("rH1JPG"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_b531ec7d.js","/")
+}).call(this,require("rH1JPG"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_73862d13.js","/")
 },{"./file-icons-class-db.json":6,"buffer":2,"rH1JPG":4}],6:[function(require,module,exports){
 module.exports={
   "//": "Excel Files",
@@ -1451,6 +1451,7 @@ module.exports={
   "//": "Zip Files",
   "application/gzip": "zip-file",
   "application/zip": "zip-file",
+  "application/x-zip-compressed": "zip-file",
   "application/x-rar-compressed": "zip-file",
   "//": "All images doesn't have icons since it can be displayed as icon",
   "image/jpeg": false,

@@ -1,17 +1,12 @@
 .default-file {
   background-image: url('../images/default.svg');
   background-repeat: no-repeat;
-  background-size: 100%, 100%;
+  background-size: 80%;
+  background-position: center;
 }
 
 .excel-file {
   background-image: url('../images/excel.svg');
-  background-repeat: no-repeat;
-  background-size: 100%, 100%;
-}
-
-.ppt-file {
-  background-image: url('../images/ppt.svg');
   background-repeat: no-repeat;
   background-size: 100%, 100%;
 }
@@ -28,6 +23,12 @@
   background-size: 100%, 100%;
 }
 
+.ppt-file {
+  background-image: url('../images/ppt.svg');
+  background-repeat: no-repeat;
+  background-size: 100%, 100%;
+}
+
 .word-file {
   background-image: url('../images/word.svg');
   background-repeat: no-repeat;
@@ -38,4 +39,5 @@
   background-image: url('../images/zip.svg');
   background-repeat: no-repeat;
   background-size: 100%, 100%;
+  background-position: center;
 }
