@@ -4,7 +4,9 @@ var path = require('path');
 var concat = require('gulp-concat');
 var minify = require('gulp-minify-css');
 var through = require('through2');
-var browserify = require('gulp-browserify');
+var browserify = require('browserify');
+var source = require('vinyl-source-stream');
+var buffer = require('vinyl-buffer');
 var uglify = require('gulp-uglify');
 // var pump = require('pump');
 
@@ -47,22 +49,20 @@ gulp.task('svg', function() {
 });
 
 gulp.task('scripts', function() {
-    return gulp.src('./src/scripts/icon-search.js')
-        .pipe(browserify({
-            insertGlobals: true,
-            debug: false
-        }))
-        .pipe(concat('file-icon.js'))
+    return browserify('./src/scripts/icon-search.js').bundle()
+        // Pass desired output filename to vinyl-source-stream (Required by browserify)
+        .pipe(source('file-icon.js'))
+        // Convert from streaming to buffered vinyl file object (Require before uglifying)
+        .pipe(buffer())
         .pipe(gulp.dest('./dist/js'));
 });
 
 gulp.task('scripts-uglify', function(cb) {
-    return gulp.src('./src/scripts/icon-search.js')
-        .pipe(browserify({
-            insertGlobals: true,
-            debug: false
-        }))
-        .pipe(concat('file-icon.min.js'))
+    return browserify('./src/scripts/icon-search.js').bundle()
+        // Pass desired output filename to vinyl-source-stream (Required by browserify)
+        .pipe(source('file-icon.min.js'))
+        // Convert from streaming to buffered vinyl file object (Require before uglifying)
+        .pipe(buffer())
         .pipe(uglify())
         .pipe(gulp.dest('./dist/js'));
 });
